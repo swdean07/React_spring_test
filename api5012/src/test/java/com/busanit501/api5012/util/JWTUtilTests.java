@@ -21,7 +21,7 @@ public class JWTUtilTests {
     @Test
     public void testGenerate() {
         // Claims 데이터 생성
-        Map<String, Object> claimMap = Map.of("mid", "ABCDE");
+        Map<String, Object> claimMap = Map.of("mid", "swh");
 
         // 1일 동안 유효한 JWT 생성
         String jwtStr = jwtUtil.generateToken(claimMap, 1);
@@ -33,7 +33,7 @@ public class JWTUtilTests {
     @Test
     public void testValidate() {
         // 유효 시간이 지난 토큰
-        String jwtStr = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtaWQiOiJBQkNERSIsImlhdCI6MTczNzcwMjIzMiwiZXhwIjoxNzM3NzAyMjkyfQ.0SshOFXnpn1mtXfFB2PJexYhfgH3n-70OIU-DWUb-o43";
+        String jwtStr = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtaWQiOiJzd2giLCJpYXQiOjE3Mzg2MzE4MzAsImV4cCI6MTczODcxODIzMH0.F69kJbI2AuGLdjhjEC4893d9nJBmTctCpnFH0lcgFJs";
 
         try {
             // 토큰 검증 및 Claims 추출
